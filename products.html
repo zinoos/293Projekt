@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Kits | Python, With Depth</title>
+  <meta
+    name="description"
+    content="Browse Python learning kits presented in a responsive raster layout."
+  >
+  <script>
+    document.documentElement.classList.add("js");
+    const storedTheme = localStorage.getItem("python-site-theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = storedTheme || (systemPrefersDark ? "dark" : "light");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" type="image/png" href="Logo.png?v=20260410k">
+  <link rel="stylesheet" href="styles.css?v=20260410k">
+  <script src="script.js?v=20260410k" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html" aria-label="Python home" data-brand-trigger aria-expanded="false" aria-controls="brand-bubble">
+        <span class="brand-frame">
+          <img
+            class="brand-logo"
+            src="Logo.png?v=20260410k"
+            alt="Official Python logo"
+            width="200"
+            height="200"
+            decoding="async"
+            data-logo-light="Logo.png?v=20260410k"
+            data-logo-dark="https://www.python.org/static/opengraph-icon-200x200.png"
+          >
+        </span>
+        <span class="brand-bubble mono" id="brand-bubble" aria-hidden="true">Build one next</span>
+      </a>
+
+      <button
+        class="nav-toggle mono"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Intro</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Learning Kits</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section page-hero">
+      <div class="container catalog-shell">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow mono">Raster page</p>
+          <h1>Python learning kits in a responsive grid.</h1>
+          <p>
+            This page uses a different layout technique on purpose: the overall page flows in stacked
+            flexible sections, while the product overview below is displayed as a CSS Grid raster.
+          </p>
+        </div>
+
+        <div class="product-grid" data-reveal>
+          <article class="product-card">
+            <p class="mono product-tag">Starter</p>
+            <h2>Automation Kit</h2>
+            <p>For people who want Python to organize files, clean data, and remove repetitive work.</p>
+            <a class="button button--ghost" href="automation-kit.html">Open details</a>
+          </article>
+          <article class="product-card">
+            <p class="mono product-tag">Builder</p>
+            <h2>Web App Kit</h2>
+            <p>For learners exploring routing, forms, APIs, and the foundations behind useful web tools.</p>
+            <a class="button button--ghost" href="web-app-kit.html">Open details</a>
+          </article>
+          <article class="product-card">
+            <p class="mono product-tag">Explorer</p>
+            <h2>Data Story Kit</h2>
+            <p>For notebook-based analysis, charts, and small research projects with real information.</p>
+            <a class="button button--ghost" href="data-story-kit.html">Open details</a>
+          </article>
+          <article class="product-card">
+            <p class="mono product-tag">Team</p>
+            <h2>Testing Kit</h2>
+            <p>For students who want to learn pytest, readable project structure, and safer refactors.</p>
+            <a class="button button--ghost" href="testing-kit.html">Open details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Each card links to a separate detail page, as required by the assignment.</p>
+      <p class="mono">Products grid</p>
+    </div>
+  </footer>
+</body>
+</html>

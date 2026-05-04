@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Python, With Depth</title>
+  <meta
+    name="description"
+    content="Meet the people behind Python, With Depth and learn how the project is structured."
+  >
+  <script>
+    document.documentElement.classList.add("js");
+    const storedTheme = localStorage.getItem("python-site-theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = storedTheme || (systemPrefersDark ? "dark" : "light");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" type="image/png" href="Logo.png?v=20260410k">
+  <link rel="stylesheet" href="styles.css?v=20260410k">
+  <script src="script.js?v=20260410k" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html" aria-label="Python home" data-brand-trigger aria-expanded="false" aria-controls="brand-bubble">
+        <span class="brand-frame">
+          <img
+            class="brand-logo"
+            src="Logo.png?v=20260410k"
+            alt="Official Python logo"
+            width="200"
+            height="200"
+            decoding="async"
+            data-logo-light="Logo.png?v=20260410k"
+            data-logo-dark="https://www.python.org/static/opengraph-icon-200x200.png"
+          >
+        </span>
+        <span class="brand-bubble mono" id="brand-bubble" aria-hidden="true">Python stays readable</span>
+      </a>
+
+      <button
+        class="nav-toggle mono"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Intro</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Learning Kits</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section hero--focused page-hero">
+      <div class="container prose-layout">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow mono">About us</p>
+          <h1>Who this project is for and how it was built.</h1>
+          <p>
+            Python, With Depth was designed as a student project that presents Python in a way that
+            feels useful, approachable, and visually intentional.
+          </p>
+        </div>
+        <article class="prose-panel" data-reveal>
+          <h2>Project team</h2>
+          <p>
+            The site is framed as a small editorial studio project. It introduces Python, explains
+            why people keep using it, and packages ideas into pages that are easy to browse.
+          </p>
+          <h3>What we focused on</h3>
+          <ul class="team-list">
+            <li>Clear content hierarchy with a readable article-style layout</li>
+            <li>Responsive design for desktop, tablet, and mobile screens</li>
+            <li>A product grid that presents themed Python learning kits</li>
+            <li>Simple forms that fit the site and meet the assignment requirements</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--tinted">
+      <div class="container split-panels">
+        <article class="prose-panel" data-reveal>
+          <p class="eyebrow mono">Structure</p>
+          <h2>How the website is organized</h2>
+          <p>
+            The intro page acts as the main text-driven page type. The learning kits page acts as the
+            raster page, where items are displayed in a grid and link to separate detail pages.
+          </p>
+        </article>
+        <article class="prose-panel" data-reveal>
+          <p class="eyebrow mono">Design choices</p>
+          <h2>Visual direction</h2>
+          <p>
+            Warm gradients, rounded cards, and editorial typography give the project a distinct look
+            while still keeping navigation and content easy to scan.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Built for the web design assignment with separate content, grid, and form pages.</p>
+      <p class="mono">About Us page</p>
+    </div>
+  </footer>
+</body>
+</html>

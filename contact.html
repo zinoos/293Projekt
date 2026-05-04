@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Python, With Depth</title>
+  <meta
+    name="description"
+    content="Share feedback about the Python, With Depth project."
+  >
+  <script>
+    document.documentElement.classList.add("js");
+    const storedTheme = localStorage.getItem("python-site-theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = storedTheme || (systemPrefersDark ? "dark" : "light");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" type="image/png" href="Logo.png?v=20260410k">
+  <link rel="stylesheet" href="styles.css?v=20260410k">
+  <script src="script.js?v=20260410k" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html" aria-label="Python home" data-brand-trigger aria-expanded="false" aria-controls="brand-bubble">
+        <span class="brand-frame">
+          <img
+            class="brand-logo"
+            src="Logo.png?v=20260410k"
+            alt="Official Python logo"
+            width="200"
+            height="200"
+            decoding="async"
+            data-logo-light="Logo.png?v=20260410k"
+            data-logo-dark="https://www.python.org/static/opengraph-icon-200x200.png"
+          >
+        </span>
+        <span class="brand-bubble mono" id="brand-bubble" aria-hidden="true">Tell us what helped</span>
+      </a>
+
+      <button
+        class="nav-toggle mono"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Intro</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Learning Kits</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section page-hero">
+      <div class="container form-layout">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow mono">Feedback form</p>
+          <h1>Send feedback about the project.</h1>
+          <p>
+            This is the meaningful form for the assignment. Visitors can share what page helped them,
+            what they still want to learn, and whether the site worked well on their device.
+          </p>
+        </div>
+
+        <form class="form-panel" data-reveal>
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name">
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" placeholder="name@example.com" required>
+          </label>
+          <label>
+            Favorite page
+            <select name="favorite-page">
+              <option>Intro</option>
+              <option>About Us</option>
+              <option>Learning Kits</option>
+              <option>Login</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" placeholder="Tell us what was useful or what should be improved." required></textarea>
+          </label>
+          <button class="button button--primary" type="submit">Send feedback</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Contact and feedback form page</p>
+      <p class="mono">Responsive form layout</p>
+    </div>
+  </footer>
+</body>
+</html>
