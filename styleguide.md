@@ -7,9 +7,9 @@
 
 ## Color Scheme
 
-- Background: soft rose and blush tones for the light theme.
-- Accent colors: deep berry, warm apricot, and Python-inspired blue in the dark theme.
-- Surfaces: layered translucent panels with subtle borders and shadows.
+- Background: deep navy and slate tones across the whole site.
+- Accent colors: Python-inspired blue with muted gold highlights.
+- Surfaces: layered translucent dark panels with subtle borders and shadows.
 
 ## Typography
 
