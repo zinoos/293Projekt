@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python, With Depth</title>
+  <meta
+    name="description"
+    content="A premium editorial front end about Python - its philosophy, ecosystem, learning curve, and creative range."
+  >
+  <script>
+    document.documentElement.classList.add("js");
+    const storedTheme = localStorage.getItem("python-site-theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = storedTheme || (systemPrefersDark ? "dark" : "light");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" type="image/png" href="Logo.png?v=20260410k">
+  <link rel="stylesheet" href="styles.css?v=20260410k">
+  <script src="script.js?v=20260410k" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="#top" aria-label="Python home" data-brand-trigger aria-expanded="false" aria-controls="brand-bubble">
+        <span class="brand-frame">
+          <img
+            class="brand-logo"
+            src="Logo.png?v=20260410k"
+            alt="Official Python logo"
+            width="200"
+            height="200"
+            decoding="async"
+            data-logo-light="Logo.png?v=20260410k"
+            data-logo-dark="https://www.python.org/static/opengraph-icon-200x200.png"
+          >
+        </span>
+        <span class="brand-bubble mono" id="brand-bubble" aria-hidden="true">Ich bin blöd</span>
+      </a>
+
+      <button
+        class="nav-toggle mono"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#why">Why Python</a>
+        <a href="#possibilities">Possibilities</a>
+        <a href="#journey">Journey</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#culture">Culture</a>
+        <a href="#start">Start</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero section hero--focused section--chapter" id="top" data-label="Origin">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow mono">Python</p>
+          <h1>A language you can <span class="accent-serif">keep using</span>.</h1>
+          <p class="hero-lede">
+            You can start with a small script and keep going until it becomes a service,
+            a notebook, a test suite, or a tool your team uses every day.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="https://www.python.org/downloads/" target="_blank" rel="noreferrer">
+              Install Python
+            </a>
+            <a class="button button--ghost" href="#possibilities">See what it can build</a>
+          </div>
+          <p class="hero-note mono">Web, data, automation, AI, teaching, tooling.</p>
+        </div>
+
+        <div class="hero-visual" data-reveal aria-label="Python capability map">
+          <article class="hero-panel hero-panel--main">
+            <p class="panel-kicker mono">Why people stick with it</p>
+            <h2>Easy to read. Hard to outgrow.</h2>
+            <p>
+              Python works in classrooms, research labs, internal tools, startups, and production
+              systems because it stays readable while the ecosystem stays deep.
+            </p>
+            <div class="signal-line" aria-hidden="true">
+              <span>scripts</span>
+              <span>APIs</span>
+              <span>pipelines</span>
+            </div>
+          </article>
+
+          <article class="hero-panel hero-panel--code">
+            <p class="panel-kicker mono">A small example</p>
+            <pre><code>from pathlib import Path
+
+for notebook in Path("ideas").glob("*.ipynb"):
+    print(f"ship -&gt; {notebook.stem}")</code></pre>
+          </article>
+
+          <article class="hero-panel hero-panel--stats">
+            <div>
+              <span class="mono">style</span>
+              <strong>readable</strong>
+            </div>
+            <div>
+              <span class="mono">range</span>
+              <strong>broad</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted section--chapter" id="why" data-label="Why">
+      <div class="container manifesto-grid">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow mono">Why Python</p>
+          <h2>A language that stays useful.</h2>
+          <p>
+            Python rewards beginners with quick wins, but it does not flatten out once the work
+            becomes serious. It keeps paying off as your projects gain complexity, collaborators,
+            and ambition.
+          </p>
+        </div>
+
+        <div class="principles">
+          <article class="principle" data-reveal>
+            <span class="principle-index mono">01</span>
+            <h3>Clarity that scales</h3>
+            <p>
+              The syntax reads like intention. That makes first steps less intimidating and large
+              codebases easier to reason about, review, and teach.
+            </p>
+          </article>
+
+          <article class="principle" data-reveal>
+            <span class="principle-index mono">02</span>
+            <h3>One language, many kinds of work</h3>
+            <p>
+              Python moves comfortably from notebooks to servers, from automation to machine
+              learning, from CLI tools to lesson plans. You do not have to leave the language to
+              change direction.
+            </p>
+          </article>
+
+          <article class="principle" data-reveal>
+            <span class="principle-index mono">03</span>
+            <h3>Fast to prototype, strong in production</h3>
+            <p>
+              It is excellent for rough drafts and for polished systems. The same language that
+              helps you test an idea after lunch can power services, pipelines, and platforms.
+            </p>
+          </article>
+
+          <article class="principle" data-reveal>
+            <span class="principle-index mono">04</span>
+            <h3>A culture shaped by readability</h3>
+            <p>
+              Python does not just ship libraries. It ships habits: explicit naming, practical
+              tradeoffs, documentation, testing, and a strong bias toward code another human can
+              revisit next month.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--chapter" id="possibilities" data-label="Modes">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow mono">What you can build</p>
+          <h2>One language, different kinds of work.</h2>
+          <p>
+            Move across domains without losing your footing. Each path below uses the same core
+            language, but the flavor of the work changes completely.
+          </p>
+        </div>
+
+        <div class="possibility-shell">
+          <div class="possibility-nav" role="group" aria-label="Python use case selector" data-reveal>
+            <button class="possibility-trigger is-active" type="button" data-key="web" aria-pressed="true">Web and APIs</button>
+            <button class="possibility-trigger" type="button" data-key="automation" aria-pressed="false">Automation</button>
+            <button class="possibility-trigger" type="button" data-key="data" aria-pressed="false">Data and science</button>
+            <button class="possibility-trigger" type="button" data-key="ai" aria-pressed="false">AI and machine learning</button>
+            <button class="possibility-trigger" type="button" data-key="tooling" aria-pressed="false">Tooling and testing</button>
+            <button class="possibility-trigger" type="button" data-key="education" aria-pressed="false">Learning and teaching</button>
+          </div>
+
+          <article class="possibility-stage" data-reveal aria-live="polite">
+            <p class="eyebrow mono stage-kicker" id="stage-kicker">Shipping online</p>
+            <h3 id="stage-title">Web apps and APIs</h3>
+            <p id="stage-description">
+              Python gives you both batteries-included frameworks and lean, modern API tools. It is equally
+              comfortable behind a dashboard, an internal admin, a SaaS backend, or a public service.
+            </p>
+
+            <div class="stage-grid">
+              <div>
+                <span class="stage-label mono">Often built with</span>
+                <p id="stage-tools">Django, FastAPI, Flask, Pydantic, SQLAlchemy</p>
+              </div>
+              <div>
+                <span class="stage-label mono">Feels especially good for</span>
+                <p id="stage-outcome">Dashboards, platform backends, CRUD apps, internal tools, and clean service layers.</p>
+              </div>
+            </div>
+
+            <pre><code id="stage-code">from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/health")
+def health():
+    return {"ok": True}</code></pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted section--chapter" id="journey" data-label="Path">
+      <div class="container journey-grid">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow mono">Learning journey</p>
+          <h2>Easy to start. Hard to outgrow.</h2>
+          <p>
+            The learning curve is gentle without being shallow. Each step adds a new layer of
+            capability rather than forcing a total restart.
+          </p>
+        </div>
+
+        <div class="journey-track">
+          <article class="journey-step" data-reveal>
+            <span class="journey-index mono">01</span>
+            <div>
+              <h3>Start in the REPL</h3>
+              <p>
+                Print text, work with lists, read files, explore loops, and feel the language in
+                real time. Python gives instant feedback without much ceremony.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-step" data-reveal>
+            <span class="journey-index mono">02</span>
+            <div>
+              <h3>Make something useful quickly</h3>
+              <p>
+                Rename files, scrape a page, parse a CSV, call an API, generate a report, or build
+                a tiny game. Utility arrives early, which keeps motivation high.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-step" data-reveal>
+            <span class="journey-index mono">03</span>
+            <div>
+              <h3>Choose a direction without changing languages</h3>
+              <p>
+                Web apps, scientific computing, data engineering, ML, testing, education, DevOps,
+                desktop tools, and APIs all remain within reach.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-step" data-reveal>
+            <span class="journey-index mono">04</span>
+            <div>
+              <h3>Learn the pro moves</h3>
+              <p>
+                Packaging, virtual environments, type hints, testing, linting, async patterns, and
+                framework design become natural extensions of the basics rather than a separate world.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-step" data-reveal>
+            <span class="journey-index mono">05</span>
+            <div>
+              <h3>Ship and share</h3>
+              <p>
+                Publish packages, deploy services, open source tools, contribute to docs, or teach
+                someone else. Python has room for both craftsmanship and generosity.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--chapter" id="ecosystem" data-label="Field">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow mono">Ecosystem</p>
+          <h2>A toolset that keeps expanding.</h2>
+          <p>
+            Python's range comes from its ecosystem as much as its syntax. There is depth almost
+            everywhere you look, from tiny utilities to field-defining libraries.
+          </p>
+        </div>
+
+        <div class="ecosystem-map">
+          <article class="ecosystem-node ecosystem-node--web" data-reveal>
+            <p class="panel-kicker mono">Web foundations</p>
+            <h3>Django, FastAPI, Flask</h3>
+            <p>Opinionated platforms, lean services, admin surfaces, async APIs, and fast prototypes.</p>
+            <ul class="chip-list" role="list">
+              <li>Django</li>
+              <li>FastAPI</li>
+              <li>Flask</li>
+              <li>Pydantic</li>
+            </ul>
+          </article>
+
+          <article class="ecosystem-node ecosystem-node--data" data-reveal>
+            <p class="panel-kicker mono">Data stack</p>
+            <h3>NumPy, pandas, Jupyter</h3>
+            <p>Analysis, notebooks, modeling, exploration, scientific workflows, and shared research.</p>
+            <ul class="chip-list" role="list">
+              <li>NumPy</li>
+              <li>pandas</li>
+              <li>Jupyter</li>
+              <li>Polars</li>
+            </ul>
+          </article>
+
+          <article class="ecosystem-node ecosystem-node--ai" data-reveal>
+            <p class="panel-kicker mono">AI and ML</p>
+            <h3>PyTorch, scikit-learn, Transformers</h3>
+            <p>Train, evaluate, experiment, and deploy models without leaving the Python ecosystem.</p>
+            <ul class="chip-list" role="list">
+              <li>PyTorch</li>
+              <li>scikit-learn</li>
+              <li>Transformers</li>
+              <li>TensorFlow</li>
+            </ul>
+          </article>
+
+          <article class="ecosystem-node ecosystem-node--automation" data-reveal>
+            <p class="panel-kicker mono">Automation</p>
+            <h3>Requests, Playwright, pathlib</h3>
+            <p>Work with files, browsers, services, spreadsheets, APIs, and repetitive tasks elegantly.</p>
+            <ul class="chip-list" role="list">
+              <li>requests</li>
+              <li>Playwright</li>
+              <li>pathlib</li>
+              <li>Typer</li>
+            </ul>
+          </article>
+
+          <article class="ecosystem-node ecosystem-node--quality" data-reveal>
+            <p class="panel-kicker mono">Quality and packaging</p>
+            <h3>pytest, Ruff, uv, Poetry</h3>
+            <p>Testing, formatting, linting, packaging, dependency management, and release workflows.</p>
+            <ul class="chip-list" role="list">
+              <li>pytest</li>
+              <li>Ruff</li>
+              <li>uv</li>
+              <li>Poetry</li>
+            </ul>
+          </article>
+
+          <article class="ecosystem-node ecosystem-node--visual" data-reveal>
+            <p class="panel-kicker mono">Visualization and apps</p>
+            <h3>Matplotlib, Plotly, Streamlit</h3>
+            <p>Charts, dashboards, internal tools, reports, and interactive experiments.</p>
+            <ul class="chip-list" role="list">
+              <li>Matplotlib</li>
+              <li>Plotly</li>
+              <li>Streamlit</li>
+              <li>Altair</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted section--chapter" id="culture" data-label="Spirit">
+      <div class="container culture-grid">
+        <div class="culture-copy" data-reveal>
+          <p class="eyebrow mono">Community and philosophy</p>
+          <h2>The language works because the culture values readable code.</h2>
+          <p>
+            Readability counts. Simple beats needlessly clever. Libraries are documented, taught,
+            refined, and shared in public. The ecosystem is strong because people keep turning what
+            they learn into tools other people can use.
+          </p>
+
+          <div class="culture-points">
+            <p><strong>Open source depth.</strong> PyPI, docs, issue threads, examples, and talks create momentum for learners and teams.</p>
+            <p><strong>Beginner-friendly without talking down.</strong> Python shows up in classrooms, bootcamps, labs, and senior engineering teams for good reason.</p>
+            <p><strong>Practical philosophy.</strong> The language celebrates explicit code, sharp tooling, and solutions that stay maintainable.</p>
+          </div>
+        </div>
+
+        <div class="culture-panels">
+          <article class="zen-panel" data-reveal>
+            <p class="panel-kicker mono">A small taste of import this</p>
+            <pre><code>Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Readability counts.</code></pre>
+          </article>
+
+          <article class="community-panel" data-reveal>
+            <p class="panel-kicker mono">Where Python keeps showing up</p>
+            <ul class="community-list" role="list">
+              <li>Education and first programming courses</li>
+              <li>Data teams and scientific research</li>
+              <li>Automation, ops, and internal tooling</li>
+              <li>APIs, SaaS products, and platform work</li>
+              <li>Machine learning, notebooks, and experiments</li>
+              <li>Testing, packaging, scripting, and developer experience</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--chapter" id="start" data-label="Launch">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-copy">
+            <p class="eyebrow mono">Start building</p>
+            <h2>Pick one project and start.</h2>
+            <p>
+              Install Python, open the tutorial, browse the ecosystem, and pick a project that
+              feels slightly bigger than yesterday.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a class="button button--primary" href="https://www.python.org/downloads/" target="_blank" rel="noreferrer">
+              Download Python
+            </a>
+            <a class="button button--ghost" href="https://docs.python.org/3/tutorial/" target="_blank" rel="noreferrer">
+              Read the tutorial
+            </a>
+            <a class="button button--ghost" href="https://pypi.org/" target="_blank" rel="noreferrer">
+              Explore PyPI
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="made-by">
+    <section class="maker-section">
+      <div class="container">
+        <div class="maker-panel" data-reveal>
+          <figure class="maker-portrait-frame">
+            <img
+              src="portrait-chinese-man.svg"
+              alt="Illustrated portrait of a Chinese man"
+              width="720"
+              height="860"
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption class="mono">Portrait illustration</figcaption>
+          </figure>
+
+          <div class="maker-copy">
+            <p class="eyebrow mono">Made by</p>
+            <h2>Zino Bonin</h2>
+            <p class="maker-lede">
+              Designed and built as a front-end piece about Python, with a calmer layout,
+              a stronger color direction, and a cleaner read on desktop and mobile.
+            </p>
+            <div class="maker-meta">
+              <p><span class="mono">Role</span> Front-end design and development</p>
+              <p><span class="mono">Focus</span> Desktop, tablet, and phone-ready layout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container footer-row">
+      <p>Python wordmark and logo are trademarks of the Python Software Foundation and are used here for identification.</p>
+      <p class="mono">Responsive editorial single-page front end</p>
+    </div>
+  </footer>
+</body>
+</html>

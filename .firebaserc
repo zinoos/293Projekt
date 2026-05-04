@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {
+    "char-app-973be": {
+      "hosting": {
+        "site": [
+          "zino-project"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

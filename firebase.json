@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "target": "site",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "AGENTS.md"
+    ]
+  }
+}
