@@ -3,10 +3,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const siteNav = document.getElementById("site-nav");
 const brandTrigger = document.querySelector("[data-brand-trigger]");
 const brandBubble = document.getElementById("brand-bubble");
-const themeToggle = document.querySelector("[data-theme-toggle]");
-const themeLabel = document.querySelector(".theme-toggle__label");
 const brandLogo = document.querySelector(".brand-logo");
-const themeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 const possibilities = {
   web: {
@@ -71,26 +68,11 @@ const possibilities = {
   },
 };
 
-function applyTheme(theme) {
-  root.dataset.theme = theme;
+root.dataset.theme = "dark";
 
-  if (brandLogo) {
-    brandLogo.src = theme === "dark" ? brandLogo.dataset.logoDark : brandLogo.dataset.logoLight;
-  }
-
-  setBrandBubbleState(false);
-
-  if (!themeToggle || !themeLabel) {
-    return;
-  }
-
-  const isDark = theme === "dark";
-  themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-  themeLabel.textContent = isDark ? "Dark" : "Light";
+if (brandLogo?.dataset.logoDark) {
+  brandLogo.src = brandLogo.dataset.logoDark;
 }
-
-applyTheme(root.dataset.theme || "light");
 
 function setNavState(isOpen) {
   if (!navToggle || !siteNav) {
@@ -107,31 +89,16 @@ function setBrandBubbleState(isOpen) {
     return;
   }
 
-  const nextState = root.dataset.theme === "light" && isOpen;
-
-  brandTrigger.setAttribute("aria-expanded", String(nextState));
-  brandTrigger.classList.toggle("is-bubble-open", nextState);
-  brandBubble.setAttribute("aria-hidden", String(!nextState));
+  brandTrigger.setAttribute("aria-expanded", String(isOpen));
+  brandTrigger.classList.toggle("is-bubble-open", isOpen);
+  brandBubble.setAttribute("aria-hidden", String(!isOpen));
 }
 
 setNavState(false);
 setBrandBubbleState(false);
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("python-site-theme", nextTheme);
-    applyTheme(nextTheme);
-  });
-}
-
 if (brandTrigger && brandBubble) {
   brandTrigger.addEventListener("click", (event) => {
-    if (root.dataset.theme !== "light") {
-      setBrandBubbleState(false);
-      return;
-    }
-
     event.preventDefault();
     const isOpen = brandTrigger.getAttribute("aria-expanded") !== "true";
     setBrandBubbleState(isOpen);
@@ -149,14 +116,6 @@ if (brandTrigger && brandBubble) {
     }
   });
 }
-
-themeQuery.addEventListener("change", (event) => {
-  if (localStorage.getItem("python-site-theme")) {
-    return;
-  }
-
-  applyTheme(event.matches ? "dark" : "light");
-});
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {

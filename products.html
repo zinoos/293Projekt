@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,12 +8,7 @@
     name="description"
     content="Browse Python learning kits presented in a responsive raster layout."
   >
-  <script>
-    document.documentElement.classList.add("js");
-    const storedTheme = localStorage.getItem("python-site-theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.dataset.theme = storedTheme || (systemPrefersDark ? "dark" : "light");
-  </script>
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -64,16 +59,6 @@
         <a href="login.html">Login</a>
       </nav>
 
-      <button
-        class="theme-toggle"
-        type="button"
-        data-theme-toggle
-        aria-pressed="false"
-        aria-label="Switch to dark mode"
-      >
-        <span class="theme-toggle__icon" aria-hidden="true"></span>
-        <span class="theme-toggle__label">Light</span>
-      </button>
     </div>
   </header>
 
